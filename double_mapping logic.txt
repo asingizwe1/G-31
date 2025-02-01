@@ -1,0 +1,19 @@
+How Data is Stored
+Imagine we have three owners (A, B, C) confirming transactions (txIndex values 1 and 2):
+
+txIndex	Owner (Address)	isConfirmed (Bool)
+1	A	true
+1	B	true
+1	C	false
+2	A	false
+2	B	true
+2	C	true
+How to Use It in a Transaction
+Confirming a Transaction
+
+isConfirmed[1][A] = true; → Owner A confirms transaction 1
+isConfirmed[1][B] = true; → Owner B confirms transaction 1
+Checking if an Owner Confirmed
+
+isConfirmed[1][A] → Returns true
+isConfirmed[2][A] → Returns false
